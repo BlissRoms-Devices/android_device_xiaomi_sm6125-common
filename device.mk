@@ -98,6 +98,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.trinket \
     memtrack.trinket
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 28
 

@@ -67,6 +67,11 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     libstdc++.vendor
 
+# Consumer IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 28
 

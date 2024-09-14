@@ -56,7 +56,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
         .remove_needed('libhidlbase.so')
         .replace_needed('libhidltransport.so', 'libhidlbase-v32.so'),
-
+    'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
+        .add_line_if_missing('gettid: 1')
 }  # fmt: skip
 
 module = ExtractUtilsModule(

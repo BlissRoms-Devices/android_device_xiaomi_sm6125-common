@@ -50,13 +50,6 @@ TARGET_NEEDS_RAW10_BUFFER_FIX := true
 
 # Display
 TARGET_SCREEN_DENSITY := 320
-TARGET_USES_COLOR_METADATA := true
-TARGET_USES_DISPLAY_RENDER_INTENTS := true
-TARGET_USES_DRM_PP := true
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_GRALLOC4 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
@@ -105,6 +98,7 @@ TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 
 # Media
+TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
 
 # Lineage Health

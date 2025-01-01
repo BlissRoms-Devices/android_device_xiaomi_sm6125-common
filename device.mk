@@ -101,8 +101,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display
 
 PRODUCT_PACKAGES += \
-    gralloc.trinket \
-    hwcomposer.trinket
+    gralloc.qcom \
+    hwcomposer.qcom
 
 # DRM
 PRODUCT_PACKAGES += \

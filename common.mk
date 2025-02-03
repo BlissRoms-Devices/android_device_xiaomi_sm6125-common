@@ -196,10 +196,6 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.qcom
-
-PRODUCT_PACKAGES += \
-    fstab.zram \
     init.class_main.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
@@ -208,7 +204,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh
 
 PRODUCT_PACKAGES += \
-    init.laurel_sprout.rc \
     init.fingerprint.rc \
     init.msm.usb.configfs.rc \
     init.qcom.rc \

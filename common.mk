@@ -4,10 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
 # A/B
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
@@ -67,10 +63,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libldacBT_enc \
     libldacBT_abr
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -254,9 +246,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
     android.hardware.sensors-service.xiaomi-multihal
 
-# Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 28
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
@@ -311,4 +300,4 @@ PRODUCT_COPY_FILES += \
 
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
+$(call inherit-product, vendor/xiaomi/sm6125-common/sm6125-common-vendor.mk)

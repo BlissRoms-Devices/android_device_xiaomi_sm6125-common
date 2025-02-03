@@ -57,12 +57,12 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libhidltransport.so', 'libhidlbase-v32.so'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
-    'vendor/lib/hw/audio.primary.laurel_sprout.so': blob_fixup()
-        .binary_regex_replace(b"vendor/lib/liba2dpoffload.so", b"liba2dpoffload_laurel_sprout.so")
+    'vendor/lib/hw/audio.primary.sm6125.so': blob_fixup()
+        .binary_regex_replace(b"vendor/lib/liba2dpoffload.so", b"liba2dpoffload_sm6125.so\x00\x00\x00\x00")
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'laurel_sprout',
+    'sm6125-common',
     'xiaomi',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

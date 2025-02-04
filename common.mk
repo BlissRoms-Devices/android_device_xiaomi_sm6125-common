@@ -118,13 +118,11 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig \
-    $(LOCAL_PATH)/overlay-lineage/packages/apps/Aperture
+    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
 
 # Perf
 PRODUCT_PACKAGES += \

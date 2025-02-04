@@ -38,10 +38,6 @@ TARGET_NEEDS_RAW10_BUFFER_FIX := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
-# Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/xiaomi:libudfps_extension.xiaomi
-TARGET_USES_FOD_ZPOS := true
-
 # HIDL
 DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml

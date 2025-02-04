@@ -50,9 +50,6 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib/mediadrm/libwvdrmengine.so'): blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so')
         .add_needed('libcrypto_shim.so'),
-    'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
-        .remove_needed('libhidlbase.so')
-        .replace_needed('libhidltransport.so', 'libhidlbase-v32.so'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
     'vendor/lib/hw/audio.primary.sm6125.so': blob_fixup()

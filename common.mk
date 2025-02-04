@@ -78,8 +78,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi \
-    libudfpshandler
+    android.hardware.biometrics.fingerprint-service.xiaomi
 
 # FM
 PRODUCT_PACKAGES += \
@@ -204,7 +203,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh
 
 PRODUCT_PACKAGES += \
-    init.fingerprint.rc \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
     init.qcom.usb.rc \

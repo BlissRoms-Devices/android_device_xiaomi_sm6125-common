@@ -49,8 +49,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
-    'vendor/lib/hw/audio.primary.sm6125.so': blob_fixup()
-        .binary_regex_replace(b"vendor/lib/liba2dpoffload.so", b"liba2dpoffload_sm6125.so\x00\x00\x00\x00")
 }  # fmt: skip
 
 module = ExtractUtilsModule(

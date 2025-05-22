@@ -28,28 +28,27 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib>
-#include <fstream>
 #include <string.h>
 #include <sys/sysinfo.h>
 #include <unistd.h>
+#include <cstdlib>
+#include <fstream>
 
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "vendor_init.h"
 #include "property_service.h"
+#include "vendor_init.h"
 
-char const *heapstartsize;
-char const *heapgrowthlimit;
-char const *heapsize;
-char const *heapminfree;
-char const *heapmaxfree;
-char const *heaptargetutilization;
+char const* heapstartsize;
+char const* heapgrowthlimit;
+char const* heapsize;
+char const* heapminfree;
+char const* heapmaxfree;
+char const* heaptargetutilization;
 
-void check_device()
-{
+void check_device() {
     struct sysinfo sys;
 
     sysinfo(&sys);
@@ -81,9 +80,8 @@ void check_device()
     }
 }
 
-void property_override(char const prop[], char const value[], bool add = true)
-{
-    auto pi = (prop_info *) __system_property_find(prop);
+void property_override(char const prop[], char const value[], bool add = true) {
+    auto pi = (prop_info*)__system_property_find(prop);
 
     if (pi != nullptr) {
         __system_property_update(pi, value, strlen(value));
@@ -92,8 +90,7 @@ void property_override(char const prop[], char const value[], bool add = true)
     }
 }
 
-void vendor_load_properties()
-{
+void vendor_load_properties() {
     check_device();
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);

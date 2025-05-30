@@ -65,7 +65,7 @@ BOARD_KERNEL_CMDLINE += buildvariant=user
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6125
-TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
+TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig vendor/xiaomi-trinket.config
 
 # Media
 TARGET_USES_ION := true
